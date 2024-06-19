@@ -18,6 +18,20 @@ const getItemsOpts = {
     }
 }
 
+const getItemOpts = {
+    schema: {
+        response: {
+            200: {
+                type: 'object',
+                properties: {
+                    id: {type: 'string'},
+                    name: {type: 'string'}
+                }
+            }
+        }
+    }
+}
+
 function itemRoutes(fastify, options, done){
     // get all items
     fastify.get('/items', getItemsOpts, (req, reply) => {
@@ -25,7 +39,7 @@ function itemRoutes(fastify, options, done){
     })
     
     // get single item
-    fastify.get('/items/:id', (req, reply) => {
+    fastify.get('/items/:id', getItemOpts, (req, reply) => {
         const {id} = req.params
     
         const item = items.find((item) => item.id === id)
