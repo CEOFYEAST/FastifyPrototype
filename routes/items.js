@@ -27,6 +27,13 @@ const getItemOpts = {
         response: {
             200: Item
         }
+    },
+    handler: function (req, reply) {
+        const {id} = req.params
+    
+        const item = items.find((item) => item.id === id)
+    
+        reply.send(item)
     }
 }
 
@@ -35,13 +42,7 @@ function itemRoutes(fastify, options, done){
     fastify.get('/items', getItemsOpts)
     
     // get single item
-    fastify.get('/items/:id', getItemOpts, (req, reply) => {
-        const {id} = req.params
-    
-        const item = items.find((item) => item.id === id)
-    
-        reply.send(item)
-    })
+    fastify.get('/items/:id', getItemOpts)
 
     done()
 }
