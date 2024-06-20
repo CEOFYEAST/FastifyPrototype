@@ -12,7 +12,9 @@
   "description": "",
   "dependencies": {
     "@fastify/swagger": "^8.14.0",
+    "@fastify/swagger-ui": "^4.0.0",
     "fastify": "^4.28.0",
+    "openapi": "^1.0.1",
     "uuid": "^10.0.0"
   },
   "devDependencies": {
