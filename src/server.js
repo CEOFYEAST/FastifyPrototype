@@ -15,7 +15,7 @@ fastify.register(require('@fastify/swagger-ui'), {
     transformSpecification: (swaggerObject, request, reply) => { return swaggerObject },
     transformSpecificationClone: true
 })
-fastify.register(require('./routes/items'))
+fastify.register(require('./routes/items.js'))
 
 
 const PORT = 5000
