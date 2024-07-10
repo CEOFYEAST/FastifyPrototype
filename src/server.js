@@ -15,6 +15,7 @@ fastify.register(require('@fastify/swagger-ui'), {
     transformSpecification: (swaggerObject, request, reply) => { return swaggerObject },
     transformSpecificationClone: true
 })
+fastify.register(require('@fastify/formbody'))
 fastify.register(require('./routes/items.js'))
 fastify.register(require('./routes/users.js'))
 

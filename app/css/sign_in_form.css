@@ -1,0 +1,20 @@
+input {
+    font-size: 16px;
+    padding-left:5px;
+}
+
+#sign_in_form_container {
+    width: 400px;
+    padding: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#sign_in_form {
+}
+
+#create_account_pointer_container {
+    text-align: center;
+}

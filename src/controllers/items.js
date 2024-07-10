@@ -1,5 +1,5 @@
 const { v4:uuidv4 } = require('uuid')
-let items = require('../Items')
+let items = require('../data/Items')
 
 const getItems = (req, reply) => {
     reply.send(items)
@@ -22,7 +22,7 @@ const addItem = (req, reply) => {
 
     items = [...items, item]
 
-    reply.code(201).send(item)
+    reply.code(201).send(JSON.stringify(items))
 }
 
 module.exports = {

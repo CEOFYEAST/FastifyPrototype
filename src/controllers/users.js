@@ -1,4 +1,4 @@
-let users = require('../Users')
+let users = require('../data/Users')
 
 const addUser = (req, reply) => {
     const { user_email, user_password } = req.body

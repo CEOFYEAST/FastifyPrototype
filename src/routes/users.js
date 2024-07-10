@@ -11,10 +11,11 @@ const User = {
 }
 
 const postUserOpts = {
+    /**
     schema: {
         body: {
             type: 'object',
-            required: ['user_email', 'user_password'],
+            required: ["user_email", 'user_password'],
             properties: {
                 user_email: { type: 'string' },
                 user_password: { type: 'string' }
@@ -24,6 +25,7 @@ const postUserOpts = {
             201: User
         }
     },
+    */
     handler: addUser
 }
 

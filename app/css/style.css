@@ -7,11 +7,6 @@ html, body {
   align-items: center;
 }
 
-body > * {
-  width: 75%;
-  margin: 20px;
-}
-
 div {
   border: solid #000 1px;
   margin: 5px;
@@ -22,12 +17,7 @@ img {
   width: 100%;
 }
 
-form {
-  border: solid #000 1px;
-  padding: 5px;
-}
-
-.flex { display:flex; }
+.flex { display: flex; }
 .flex.top { align-items: start; }
 .flex.middle { align-items: center; }
 .flex.bottom { align-items: end; }
