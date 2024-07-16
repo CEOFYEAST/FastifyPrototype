@@ -15,17 +15,21 @@
   <div id="sign_in_form_container">
 
     <form id="sign_in_form" class="flex column" action="\users" method="post">
+
       <input type="email" placeholder="Email" id="user_email" name="user_email" required><br>
       <input type="password" placeholder="Password" id="user_password" name="user_password" required><br>
 
-      <div class="flex">
-        <div class="x2"></div>
-        <button type="submit" class="x1">Submit</button>
-        <div class="x2"></div>
+      <div id="submit_container" class="flex">
+        <div class="x3"></div>
+        <button id="submit" type="submit" class="x2">Submit</button>
+        <div class="x3"></div>
       </div>
 
+      <p>Sign-In Failed</p>
+
       <div id="create_account_pointer_container">
-        <p>Don't have an account? Create one.</p>
+        <p id="create_account_pointer_link">Don't have an account? Create one.</p>
+        <p id="create_account_pointer">Creating an account allows you to store production vals. for up to three factories across sessions.</p>
       </div>
 
     </form>
