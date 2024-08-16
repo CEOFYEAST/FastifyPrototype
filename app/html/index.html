@@ -11,29 +11,45 @@
 </head>
 
 <body>
-  
-  <div id="sign_in_form_container">
+   
+  <div id="header_container" class="flex">
+    <div class="x1"></div>
+    <h1 id="header">Fastify Prototype</h1>
+    <div class="x1"></div>
+  </div>
 
-    <form id="sign_in_form" class="flex column" action="\users" method="post">
+  <div id="subheader" class="flex">
+    <div class="x1"></div>
+    <!-- Button to open the modal login form -->
+    <button onclick="document.getElementById('sign-in-dialog').showModal();">Login</button>
+    <div class="x1"></div>
+  </div>
 
-      <input type="email" placeholder="Email" id="user_email" name="user_email" required><br>
-      <input type="password" placeholder="Password" id="user_password" name="user_password" required><br>
+  <dialog id="sign-in-dialog">
 
-      <div id="submit_container" class="flex">
+    <div id="header-bar" align="right">
+      <button id="close-button" class="x1" onclick="document.getElementById('sign-in-dialog').close();">X</button>
+    </div>
+
+    <form id="sign-in-form" class="flex column">
+
+      <input type="email" placeholder="Email" id="user-email" name="userEmail" required><br>
+      <input type="password" placeholder="Password" id="user-password" name="userPassword" required><br>
+
+      <div id="submit-container" class="flex">
         <div class="x3"></div>
         <button id="submit" type="submit" class="x2">Submit</button>
         <div class="x3"></div>
       </div>
 
-      <p>Sign-In Failed</p>
-
-      <div id="create_account_pointer_container">
-        <p id="create_account_pointer_link">Don't have an account? Create one.</p>
-        <p id="create_account_pointer">Creating an account allows you to store production vals. for up to three factories across sessions.</p>
+      <div id="create-account-pointer-container">
+        <p id="create-account-pointer-link">Don't have an account? Create one.</p>
+        <p id="create-account-pointer">Creating an account allows you to store production vals. for up to three factories across sessions.</p>
       </div>
 
     </form>
-  </div>
+
+  </dialog>
   
   <script src="..\js\script.js"></script>
 </body>
